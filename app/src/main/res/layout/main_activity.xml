@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation='horizontal'
+        android:weightSum="1">
+
+        <RadioButton
+            android:id="@+id/rd_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:checked="true"
+            android:text="sm(32x32)"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rd_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:checked="false"
+            android:text="md(64x64)"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rd_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:checked="false"
+            android:text="lg(128x128)"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rd_svg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:checked="false"
+            android:text="svg"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:hint="sbi,hdfc" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_fetch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:enabled="true"
+        android:text="Fetch Icon" />
+
+    <Spinner
+        android:id="@+id/spinner_modes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:spinnerMode="dropdown" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_fetch_modes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:enabled="true"
+        android:text="Fetch Modes Icon" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/image_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        tools:itemCount="10"
+        tools:listitem="@layout/image_item_row" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
