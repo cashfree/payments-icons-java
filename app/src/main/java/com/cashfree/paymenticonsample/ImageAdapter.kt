@@ -26,6 +26,7 @@ class ImageAdapter(private val icons: List<Icon>) :
 
     class ViewHolder(private val binding: ImageItemRowBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(icon: Icon) {
+            binding.iconName.text = icon.iconName
             Glide
                 .with(binding.root.context)
                 .load(icon.iconUrl)
