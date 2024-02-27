@@ -4,3 +4,9 @@ plugins {
     id("org.jetbrains.kotlin.android") version "1.9.0" apply false
     id("org.jetbrains.kotlin.jvm") version "1.9.0" apply false
 }
+
+try {
+    Config.loadData(project.rootProject.file("local.properties"))
+} catch (exception: Exception) {
+    throw GradleException(exception.message ?: "")
+}
